@@ -29,8 +29,6 @@ dataAttrib *InitCentroids(dataAttrib *dataset,int K)
 		(data_centroids + i)->m_dAttribA = (dataset + i)->m_dAttribA;
 		(data_centroids + i)->m_dAttribB = (dataset + i)->m_dAttribB;
 	}
-	/*delete []data_centroids;
-	data_centroids = NULL;*/
 	return data_centroids;
 }
 
@@ -110,10 +108,5 @@ cluster_data Kmeans(dataAttrib dataset[], int K, int iDataCount)
 		}	
 	}
 	cout << "Congratulations,cluster complete!" << endl;
-	//É¾³ý¶¯Ì¬ÉêÇëµÄ¿Õ¼ä
-	/*delete [] cluster_result.m_pCatagory;
-	cluster_result.m_pCatagory = NULL;
-	delete[]centroids;
-	centroids = NULL;*/
 	return cluster_result;
 }
